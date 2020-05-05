@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <Button
+        android:id="@+id/buttonAddPhrases"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickButtonAddPhrases"
+        android:text="Add Phrases"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDisplayPhrases"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonDisplayPhrases"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickButtonDisplayPhrases"
+        android:text="Display Phrases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <Button
+        android:id="@+id/buttonEditPhrases"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_style"
+
+        android:onClick="clickbuttonEditPhrases"
+        android:text="Edit Phrases"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddPhrases"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonLanguageSubscription"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickBbuttonLanguageSubscription"
+
+        android:text="Language Subscription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDisplayPhrases" />
+
+    <Button
+        android:id="@+id/buttonTranslate"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickButtonTranslate"
+        android:text="Translate"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLanguageSubscription"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toEndOf="@+id/buttonEditPhrases"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddPhrases" />
+
+    <Button
+        android:id="@+id/offlineBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickUseOffline"
+        android:padding="10dp"
+        android:text="Switch to Offline Mode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTranslate"
+        app:layout_constraintVertical_bias="0.807" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Hello, Welcome to the Translator!\n Add some phrases, select some languages and start learning."
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

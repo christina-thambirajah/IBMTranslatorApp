@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPhrases"
+    android:background="@drawable/background">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_style"
+        android:text="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="clickBacktoMenu">
+    </Button>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:text="Type a phrase you want to learn and Click save to store."
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTxtPhrase" />
+
+    <EditText
+        android:id="@+id/editTxtPhrase"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:outlineSpotShadowColor="@android:color/white"
+        android:textAlignment="center"
+        android:textColor="#0b032d"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_style"
+        android:onClick="clickSaveBtn"
+        android:text="Save"
+        app:layout_constraintBottom_toTopOf="@+id/clearBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_margin="200dp"
+        android:background="@drawable/button_style"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="clickClearBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
